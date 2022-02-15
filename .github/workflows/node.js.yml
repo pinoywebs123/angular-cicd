@@ -29,9 +29,10 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
 
+  Deployment:
+    
     steps:
     - uses: actions/checkout@v2
     - name: Connecting to Server
       uses: actions/setup-node@v2
     - run: npm -v  
-  
