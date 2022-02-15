@@ -18,4 +18,5 @@ jobs:
         script: |
             whoami
             ls -la
-            git branch
+            cd /var/www/html/survery
+            ls -la
