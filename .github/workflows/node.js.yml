@@ -25,3 +25,8 @@ jobs:
       run: npm run lint
     - name: Build
       run: npm run build -- --prod 
+
+  Deployment:   
+
+    steps:
+    - name: Connecting to server 
