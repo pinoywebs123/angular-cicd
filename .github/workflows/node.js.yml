@@ -27,5 +27,11 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
-    - name: Building Project
     - run: npm run build --if-present
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Connecting to Server
+      uses: actions/setup-node@v2
+    - run: npm -v  
+  
