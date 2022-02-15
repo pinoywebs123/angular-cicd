@@ -24,5 +24,4 @@ jobs:
     - name: Lint
       run: npm run lint
     - name: Build
-      run: npm run build -- --prod
-    - name: Connecting to server  
+      run: npm run build -- --prod 
