@@ -23,7 +23,7 @@ jobs:
     - name: Building Project
       run: npm run build --if-present
 
-  Deployment
+  Deployment:
     steps:    
     - name: Connecting to Server
       run: npm -v 
