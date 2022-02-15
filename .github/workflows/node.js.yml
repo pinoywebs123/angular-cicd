@@ -29,4 +29,5 @@ jobs:
   Deployment:   
 
     steps:
+    - uses: actions/checkout@v2
     - name: Connecting to server 
