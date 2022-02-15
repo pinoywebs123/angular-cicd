@@ -18,6 +18,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - name: Install Dependences
+      run: npm install
     - name: Building Project
       run: npm run build --if-present
     - name: executing remote ssh commands using password
