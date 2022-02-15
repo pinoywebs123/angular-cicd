@@ -18,10 +18,14 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Install Dependences
-      run: npm install
     - name: Building Project
       run: npm run build --if-present
-    - name: Connecting to Server
-      run: npm -v 
+    - name: executing remote ssh commands using password
+    - uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.PASSWORD }}
+        port: ${{ secrets.PORT }}
+        script: whoami
   
