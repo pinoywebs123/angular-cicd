@@ -5,7 +5,23 @@ on:
 jobs:
 
   build:
-    name: Build
+    name: Building
+    runs-on: ubuntu-latest
+    steps:
+    - name: executing remote ssh commands using password
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.PASSWORD }}
+        port: ${{ secrets.PORT }}
+        script: |
+            whoami
+            ls -la
+            cd /var/www/html/survey
+            ls -la
+
+    name: Deployment
     runs-on: ubuntu-latest
     steps:
     - name: executing remote ssh commands using password
